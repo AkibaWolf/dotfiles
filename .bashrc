@@ -113,9 +113,9 @@ if ! shopt -oq posix; then
 fi
 
 # customize tab completion
-bind 'set completion-ignore-case on'
-bind 'set show-all-if-ambiguous on'
-bind 'TAB:menu-complete'
+# bind 'set completion-ignore-case on'
+# bind 'set show-all-if-ambiguous on'
+# bind 'TAB:menu-complete'
 
 # customize prompt
 if [ -f ~/.env.local ]; then
