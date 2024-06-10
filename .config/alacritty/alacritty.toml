@@ -1,0 +1,20 @@
+[env]
+TERM = "xterm-256color"
+
+[font]
+normal.family = "MonaspiceNe Nerd Font Mono"
+size = 12.0
+
+[shell]
+program = "/bin/bash"
+args = ["-l", "-c", "tmux attach ||  tmux"]
+
+[window]
+dimensions.columns = 120
+dimensions.lines = 32
+padding.x = 5
+padding.y = 5
+
+opacity = 0.95
+blur = true
+

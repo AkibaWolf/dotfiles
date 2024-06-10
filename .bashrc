@@ -112,6 +112,11 @@ if ! shopt -oq posix; then
     fi
 fi
 
+# initialize Rust environment
+if [ -f ~/.cargo/env ]; then
+    . ~/.cargo/env
+fi
+
 # customize tab completion
 # bind 'set completion-ignore-case on'
 # bind 'set show-all-if-ambiguous on'
