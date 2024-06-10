@@ -117,6 +117,17 @@ if [ -f ~/.cargo/env ]; then
     . ~/.cargo/env
 fi
 
+# put remote hostname in tmux window when using ssh
+ssh() {
+    if [ -n "$TMUX" ]; then
+        tmux -2u rename-window "$(echo $* | rev | cut -d '@' -f1 | rev)";
+        command ssh "$@";
+        tmux -2u set-window-option automatic-rename "on" > /dev/null;
+    else
+        command ssh "$@";
+    fi
+}
+
 # customize tab completion
 # bind 'set completion-ignore-case on'
 # bind 'set show-all-if-ambiguous on'
