@@ -82,7 +82,7 @@ ssh() {
 }
 
 # put remote hostname in terminal tab name when using ssh
-echo -e -n "\033];${USER}@${HOSTNAME}:${PWD/#$HOME/\~}\007"
+echo -e -n "\033];${USER}@${HOSTNAME^^}:${PWD/#$HOME/\~}\007"
 
 # customize tab completion
 # bind 'set completion-ignore-case on'
