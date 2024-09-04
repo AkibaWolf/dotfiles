@@ -96,7 +96,7 @@ fi
 
 # customize prompt
 if [ -f ~/.env.local ]; then
-    export PS1="\[\e[m\][\[\e[m\]\[\e[38;5;172m\]\u\[\e[m\]@\[\e[38;5;153m\]\h\[\e[m\]\[\e[m\]]:\[\e[38;5;214m\]\w\[\e[m\]\[\e[m\]\\$ "
+    export PS1="\[\e[m\][\[\e[m\]\[\e[38;5;172m\]\u\[\e[m\]@\[\e[38;5;153m\]${HOSTNAME^^}\[\e[m\]\[\e[m\]]:\[\e[38;5;214m\]\w\[\e[m\]\[\e[m\]\\$ "
 elif [ -f ~/.env.remote ]; then
-    export PS1="\[\e[m\][\[\e[m\]\[\e[0;32;172m\]\u\[\e[m\]@\[\e[38;5;153m\]\h\[\e[m\]\[\e[m\]]:\[\e[0;32;214m\]\w\[\e[m\]\[\e[m\]\\$ "
+    export PS1="\[\e[m\][\[\e[m\]\[\e[0;32;172m\]\u\[\e[m\]@\[\e[38;5;153m\]${HOSTNAME^^}\[\e[m\]\[\e[m\]]:\[\e[0;32;214m\]\w\[\e[m\]\[\e[m\]\\$ "
 fi
