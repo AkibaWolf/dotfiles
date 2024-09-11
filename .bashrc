@@ -96,9 +96,12 @@ fi
 
 # customize prompt
 if [ -f ~/.env.local ]; then
-    export PS1="\[\e[m\][\[\e[m\]\[\e[38;5;172m\]\u\[\e[m\]@\[\e[38;5;153m\]${HOSTNAME^^}\[\e[m\]\[\e[m\]]:\[\e[38;5;214m\]\w\[\e[m\]\[\e[m\]\\$ "
+#    export PS1="\[\e[m\][\[\e[m\]\[\e[38;5;172m\]\u\[\e[m\]@\[\e[38;5;153m\]${HOSTNAME^^}\[\e[m\]\[\e[m\]]:\[\e[38;5;214m\]\w\[\e[m\]\[\e[m\]\\$ "
+    export PS1="\n┌\[\e[m\][\[\e[m\]\[ \e[38;5;172m\]\u\[\e[m\]@\[\e[38;5;153m\]${HOSTNAME^^}\[\e[m\]\[\e[m\] ]: \[\e[38;5;214m\]\w\[\e[m\]\[\e[m\]\\n└\\$ "
 elif [ -f ~/.env.remote-private ]; then
-    export PS1="\[\e[m\][\[\e[m\]\[\e[0;32;172m\]\u\[\e[m\]@\[\e[38;5;153m\]${HOSTNAME^^}\[\e[m\]\[\e[m\]]:\[\e[0;32;214m\]\w\[\e[m\]\[\e[m\]\\$ "
+#    export PS1="\[\e[m\][\[\e[m\]\[\e[0;32;172m\]\u\[\e[m\]@\[\e[38;5;153m\]${HOSTNAME^^}\[\e[m\]\[\e[m\]]:\[\e[0;32;214m\]\w\[\e[m\]\[\e[m\]\\$ "
+    export PS1="\n┌\[\e[m\][\[\e[m\]\[ \e[0;32;172m\]\u\[\e[m\]@\[\e[38;5;153m\]${HOSTNAME^^}\[\e[m\]\[\e[m\] ]: \[\e[0;32;214m\]\w\[\e[m\]\[\e[m\]\\n└\\$ "
 elif [ -f ~/.env.remote-public ]; then
-    export PS1="\[\e[m\][\[\e[m\]\[\e[0;95;172m\]\u\[\e[m\]@\[\e[38;5;153m\]${HOSTNAME^^}\[\e[m\]\[\e[m\]]:\[\e[0;95;197m\]\w\[\e[m\]\[\e[m\]\\$ "
+#    export PS1="\[\e[m\][\[\e[m\]\[\e[0;95;172m\]\u\[\e[m\]@\[\e[38;5;153m\]${HOSTNAME^^}\[\e[m\]\[\e[m\]]:\[\e[0;95;197m\]\w\[\e[m\]\[\e[m\]\\$ "
+    export PS1="\n┌\[\e[m\][\[\e[m\]\[ \e[0;95;172m\]\u\[\e[m\]@\[\e[38;5;153m\]${HOSTNAME^^}\[\e[m\]\[\e[m\] ]: \[\e[0;95;197m\]\w\[\e[m\]\[\e[m\]\\n└\\$ "
 fi
